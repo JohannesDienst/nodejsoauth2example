@@ -1,0 +1,7 @@
+{
+  "databaseurl" : "localhost:27017/oauthdb",
+  "security": 
+  {
+    "tokenLife" : 3600
+  }
+}
