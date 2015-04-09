@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div(class="logincontainer centered")
+    h1 Connect Local
+      form#formLoginUser(name="/connect/local",method="post",action="/connect/local")
+        div(class="line")
+          label(for="email") Email:
+          input#inputEmail(type="text", placeholder="email", name="email")
+        div(class="line")
+          label(for="password") Password:
+          input#inputUserPassword(type="password", placeholder="password", name="password")
+        div(class="line")
+          button#btnSubmit(type="submit") login   
+      a(href='/account') Go back to profile

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  div(class="logincontainer centered")
+    h1= title
+    form#formRegisterUser(name="register",method="post",action="/doregister")
+      div(class="line")
+        label(for="email") Email:
+        input#inputUserEmail(type="email", placeholder="email", name="email")
+      div(class="line")
+        label(for="password") Password:
+        input#inputUserPassword(type="password", placeholder="password", name="password")
+      div(class="line")
+        button#btnSubmit(type="submit") register
