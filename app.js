@@ -4,6 +4,8 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+var session = require('express-session');
 
 var mongoose = require('mongoose');
 var config = require('./config/config');
@@ -11,16 +13,24 @@ mongoose.connect(config.databaseurl);
 
 var app = express();
 
-console.log('get env: ' + app.get('env'));
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
+app.use(methodOverride());
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 var passport = require('passport');
 require('./config/passport')(passport);
 app.use(passport.initialize());
+
+app.use(session({ secret: 'eingeheimersecret' }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 var server = require('./config/oauth2');
 

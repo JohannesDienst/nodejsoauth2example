@@ -7,18 +7,25 @@
   },
   "dependencies": {
     "express": "~4.2.0",
+    "express-session" : "*",
     "static-favicon": "~1.0.0",
     "morgan": "~1.0.0",
     "cookie-parser": "~1.0.1",
     "body-parser": "~1.0.0",
+    "method-override": "~1.0.0",
     "debug": "~0.7.4",
+    "jade": "*",
+    "stylus" : "*",
     "mongodb": "*",
     "mongoose" : "*",
     "passport" : "*",
+    "passport-local" : "*",
     "passport-http" : "*",
     "passport-oauth2-client-password" : "*",
     "oauth2orize" : "*",
     "bcrypt-nodejs" : "*",
-    "passport-http-bearer": "*"
+    "passport-http-bearer": "*",
+    "passport-twitter": "*",
+    "passport-google-oauth" : "*"
   }
 }
