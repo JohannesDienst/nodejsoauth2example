@@ -17,6 +17,19 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+var stylus = require('stylus');
+var nib = require('nib');
+function compile(str, path) {
+  return stylus(str)
+    .set('filename', path)
+    .use(nib());
+}
+app.use(stylus.middleware(
+  { src: __dirname + '/public'
+  , compile: compile
+  }
+));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());

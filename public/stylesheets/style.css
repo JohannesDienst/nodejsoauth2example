@@ -1,8 +1,62 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto");
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Roboto;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
 }
-
+input {
+  font-family: Roboto;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 25px;
+  border: none;
+}
+::-webkit-input-placeholder {
+  padding-left: 10px;
+}
+button[type=submit] {
+  font-family: Roboto;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #e98b39;
+  color: #fbfcfc;
+  border: none;
+  height: 30px;
+  font-size: 15px;
+  border-bottom: 2px solid #d35400;
+}
+button[type=submit]:hover {
+  background: #d35400;
+}
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+h1 {
+  margin: 0;
+  padding: 18px;
+  background: #d35400;
+  color: #000;
+  width: 100%;
+}
+form {
+  margin: 18px;
+  width: 200px;
+  padding: 0 20px 20px 20px;
+  border: 1px solid #a3b1b2;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #a3b1b2;
+}
+form label {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+form input {
+  margin-top: 10px;
+  width: 100%;
+}
+form button[type=submit] {
+  margin-top: 20px;
 }
