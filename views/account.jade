@@ -3,50 +3,53 @@ extends layout
 block content
   h1 Herzlich willkommen
 
-  .container
-    if user.local.email
-      p userid: #{user._id}
-      p email: #{user.local.email}
-      p password: #{user.local.password}
-      .unlink
-        if user.twitter.token || user.google.token
-          a(href='/unlink/local') Unlink
-        else
-          p.inactive Unlink
-    else
-      .connect
-        a(href="/connect/local", title="connect local") Connect Local
+  hr
+
+  .account-info.clearfix
+    .container
+      if user.local.email
+        p userid:&nbsp;#{user._id}
+        p email:&nbsp;#{user.local.email}
+        p password:&nbsp;#{user.local.password}
+        .unlink
+          if user.twitter.token || user.google.token
+            a(href='/unlink/local') Unlink
+          else
+            p.inactive Unlink
+      else
+        .connect
+          a(href="/connect/local", title="connect local") Connect Local
   
-  .container
-    if user.twitter.token
-      p id: #{user.twitter.id}
-      p token: #{user.twitter.token}
-      p display name: #{user.twitter.displayName}
-      p username: #{user.twitter.username}
-      .unlink
-        if user.local.email || user.google.token
-          a(href="/unlink/twitter") Unlink
-        else
-          p.inactive Unlink
-    else
-      .connect
-        a(href="/connect/twitter") Connect Twitter
+    .container
+      if user.twitter.token
+        p id: #{user.twitter.id}
+        p token: #{user.twitter.token}
+        p display name: #{user.twitter.displayName}
+        p username: #{user.twitter.username}
+        .unlink
+          if user.local.email || user.google.token
+            a(href="/unlink/twitter") Unlink
+          else
+            p.inactive Unlink
+      else
+        .connect
+          a(href="/connect/twitter") Connect Twitter
 
-  .container
-    if user.google.token
-      p id: #{user.google.id}
-      p token: #{user.google.token}
-      p email name: #{user.google.email}
-      p name: #{user.google.name}
-      .unlink
-        if user.local.email || user.twitter.token
-          a(href="/unlink/google") Unlink
-        else
-          p.inactive Unlink
-    else
-      .connect
-        a(href="/connect/google") Connect Google
+    .container
+      if user.google.token
+        p id: #{user.google.id}
+          p token: #{user.google.token}
+        p email name: #{user.google.email}
+        p name: #{user.google.name}
+        .unlink
+          if user.local.email || user.twitter.token
+            a(href="/unlink/google") Unlink
+          else
+            p.inactive Unlink
+      else
+        .connect
+          a(href="/connect/google") Connect Google
 
-  div.logout
-    .connect
-      a(href="/logout") Logout
+    div.logout
+      .connect
+        a(href="/logout") Logout

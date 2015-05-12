@@ -1,58 +1,100 @@
 @import 'nib'
 
-@import url("http://fonts.googleapis.com/css?family=Roboto");
+@import url("http//fonts.googleapis.com/css?family=Roboto");
+
+.clearfix
+  clearfix()
+
+*
+  box-sizing border-box
 
 body 
-  font-family: Roboto
-  font-size: 20px
-  padding: 0
-  margin: 0
-
-input
-  font-family: Roboto
-  border-radius: 5px
-  height: 25px
-  border: none
- 
-::-webkit-input-placeholder
-  padding-left: 10px
- 
-button[type=submit]
-  font-family: Roboto;
-  border-radius: 5px
-  background: #e98b39
-  color: #fbfcfc
-  border: none
-  height: 30px
-  font-size: 15px
-  border-bottom: 2px solid #D35400
-  &:hover
-    background: #D35400
+  font-family Roboto
+  font-size 20px
+  padding 0
+  margin 0
  
 a
-  color: #00B7FF;
+  color #FFF;
+  text-decoration none
  
 h1
-  margin: 0
-  padding: 18px
-  background: #D35400
-  color: black
-  width: 100%
+  margin 0
+  padding 30px 0
+  color black
+  width 100%
+  text-align center
+  text-transform uppercase
 
- 	
+hr
+  width 20%
+  margin 0 auto
+
+.loginpossibilitycontainer
+  margin-top 30px
+
+  .loginpossibility
+    width 20%
+    float left
+    margin 0 2.5%
+    text-align center
+    background grey
+    padding 15px 0
+    border-radius 10px
+    
+    &#twitter-login
+      background blue
+      
+    &#google-login
+      background red
+
 form
-  margin 18px
-  width: 200px
-  padding: 0 20px 20px 20px
-  border: 1px solid #a3b1b2
-  border-radius: 10px
-  background: #a3b1b2
+  margin 0 auto
+  width 200px
+  padding 0 20px 20px 20px
+  border 1px solid #a3b1b2
+  border-radius 10px
+  background #a3b1b2
   label
-    display: block
-    width: 100%
-    margin-top: 15px
+    display block
+    width 100%
+    margin-top 15px
   input
-    margin-top: 10px
-    width: 100%
+    margin-top 10px
+    width 100%
   button[type=submit]
-    margin-top: 20px
+    margin-top 20px
+
+input
+  font-family Roboto
+  border-radius 5px
+  height 25px
+  border none
+ 
+-webkit-input-placeholder
+  padding-left 10px
+ 
+button[type=submit]
+  font-family Roboto;
+  border-radius 5px
+  background #e98b39
+  color #fbfcfc
+  border none
+  height 30px
+  font-size 15px
+  border-bottom 2px solid #D35400
+  &:hover
+    background #D35400
+
+.account-info
+  .container
+    margin 30px 5% 0
+    width 40%
+    float left
+    background #848484
+    border-radius 10px
+    padding 20px
+    min-height: 280px;
+    
+    p
+      word-wrap break-word

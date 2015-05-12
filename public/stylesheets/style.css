@@ -1,46 +1,63 @@
-@import url("http://fonts.googleapis.com/css?family=Roboto");
+@import url("http//fonts.googleapis.com/css?family=Roboto");
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 body {
   font-family: Roboto;
   font-size: 20px;
   padding: 0;
   margin: 0;
 }
-input {
-  font-family: Roboto;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  height: 25px;
-  border: none;
-}
-::-webkit-input-placeholder {
-  padding-left: 10px;
-}
-button[type=submit] {
-  font-family: Roboto;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  background: #e98b39;
-  color: #fbfcfc;
-  border: none;
-  height: 30px;
-  font-size: 15px;
-  border-bottom: 2px solid #d35400;
-}
-button[type=submit]:hover {
-  background: #d35400;
-}
 a {
-  color: #00b7ff;
+  color: #fff;
+  text-decoration: none;
 }
 h1 {
   margin: 0;
-  padding: 18px;
-  background: #d35400;
+  padding: 30px 0;
   color: #000;
   width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+hr {
+  width: 20%;
+  margin: 0 auto;
+}
+.loginpossibilitycontainer {
+  margin-top: 30px;
+}
+.loginpossibilitycontainer .loginpossibility {
+  width: 20%;
+  float: left;
+  margin: 0 2.5%;
+  text-align: center;
+  background: #808080;
+  padding: 15px 0;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.loginpossibilitycontainer .loginpossibility#twitter-login {
+  background: #00f;
+}
+.loginpossibilitycontainer .loginpossibility#google-login {
+  background: #f00;
 }
 form {
-  margin: 18px;
+  margin: 0 auto;
   width: 200px;
   padding: 0 20px 20px 20px;
   border: 1px solid #a3b1b2;
@@ -59,4 +76,41 @@ form input {
 }
 form button[type=submit] {
   margin-top: 20px;
+}
+input {
+  font-family: Roboto;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 25px;
+  border: none;
+}
+-webkit-input-placeholder {
+  padding-left: 10px;
+}
+button[type=submit] {
+  font-family: Roboto;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #e98b39;
+  color: #fbfcfc;
+  border: none;
+  height: 30px;
+  font-size: 15px;
+  border-bottom: 2px solid #d35400;
+}
+button[type=submit]:hover {
+  background: #d35400;
+}
+.account-info .container {
+  margin: 30px 5% 0;
+  width: 40%;
+  float: left;
+  background: #848484;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 280px;
+}
+.account-info .container p {
+  word-wrap: break-word;
 }
