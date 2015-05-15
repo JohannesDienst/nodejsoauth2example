@@ -8,7 +8,7 @@
 *
   box-sizing border-box
 
-body 
+body
   font-family Roboto
   font-size 20px
   padding 0
@@ -17,21 +17,25 @@ body
 a
   color #FFF;
   text-decoration none
- 
+
+.centered
+  text-align center
+
 h1
   margin 0
-  padding 30px 0
+  padding 50px 0
+  padding-bottom 100px
   color black
   width 100%
   text-align center
   text-transform uppercase
 
 hr
-  width 20%
-  margin 0 auto
+  width 11%
+  margin 50px auto
+  border #f39c11
 
 .loginpossibilitycontainer
-  margin-top 30px
 
   .loginpossibility
     width 20%
@@ -39,14 +43,20 @@ hr
     margin 0 2.5%
     text-align center
     background grey
-    padding 15px 0
-    border-radius 10px
+    padding 22px 0
+    border-radius 5px
+
+    &#local-login, &#local-signup
+      background #2d3e50
+
+      a
+        color #f39c11
     
     &#twitter-login
-      background blue
+      background #55acef
       
     &#google-login
-      background red
+      background #de4b39
 
 form
   margin 0 auto
