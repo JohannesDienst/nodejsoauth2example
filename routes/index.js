@@ -9,7 +9,7 @@ module.exports = function(passport, app, server) {
 
   app.get('/login', function(req, res) {
     req.logout();
-    res.render('login', { title: 'Login' });
+    res.render('login', { title: 'User Login' });
   });
 
   app.post('/dologin',

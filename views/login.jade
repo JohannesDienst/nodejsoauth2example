@@ -2,13 +2,11 @@ extends layout
 
 block content
   div(class="logincontainer centered")
-    h1= title
     form#formLoginUser(name="dologin",method="post",action="/dologin")
+      h1= title
       div(class="line")
-        label(for="username") Email:
-        input#inputUserName(type="text", placeholder="email", name="username")
+        input#inputUserName(type="text", placeholder="email address", name="username")
       div(class="line")
-        label(for="password") Password:
         input#inputUserPassword(type="password", placeholder="password", name="password")
       div(class="line")
         button#btnSubmit(type="submit") login
