@@ -46,6 +46,9 @@ hr
     padding 22px 0
     border-radius 5px
 
+    a
+      color #FFF
+
     &#local-login, &#local-signup
       background #2d3e50
 
@@ -54,7 +57,7 @@ hr
     
     &#twitter-login
       background #55acef
-      
+
     &#google-login
       background #de4b39
 
@@ -73,6 +76,7 @@ form
     width 80%
     height 67px
     background #ecf0f1
+    padding-left 50px
 
   button[type=submit]
     margin-top 20px
@@ -87,21 +91,25 @@ input
   padding-left 10px
  
 button[type=submit]
-  font-family Roboto;
+  font-family Roboto
   border-radius 5px
   background #2d3e50
   color #f39c11
   border none
   height 67px
   font-size 20px
+  width 80%
 
   &:hover
-    background #D35400
+    background #f39c11
+    color #2d3e50
 
 .account-info
+
   .container
-    margin 30px 5% 0
-    width 40%
+    box-sizing border-box
+    margin-left 2.5%
+    width 30%
     float left
     background #848484
     border-radius 10px
@@ -109,4 +117,8 @@ button[type=submit]
     min-height: 280px;
     
     p
+      text-align center
       word-wrap break-word
+      
+      &.heading
+        color #f39c11
