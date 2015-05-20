@@ -33,7 +33,7 @@ block content
         p.heading user name
         p #{user.twitter.username}
       else
-        .connect
+        .connect.twitter-connect
           a(href="/connect/twitter") Connect Twitter
 
     .container
@@ -43,11 +43,14 @@ block content
             a(href="/unlink/google") Unlink
           else
             p.inactive Unlink
-        p id: #{user.google.id}
-        p email name: #{user.google.email}
-        p name: #{user.google.name}
+        p.heading id
+        p #{user.google.id}
+        p.heading email name
+        p #{user.google.email}
+        p.heading name
+        p #{user.google.name}
       else
-        .connect
+        .connect.google-connect
           a(href="/connect/google") Connect Google
 
 #    div.logout

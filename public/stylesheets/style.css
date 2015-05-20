@@ -16,7 +16,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-size: 20px;
   padding: 0;
   margin: 0;
@@ -47,7 +47,7 @@ hr {
   float: left;
   margin: 0 2.5%;
   text-align: center;
-  background: #808080;
+  background: #2d3e50;
   padding: 22px 0;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -55,12 +55,7 @@ hr {
 .loginpossibilitycontainer .loginpossibility a {
   color: #fff;
 }
-.loginpossibilitycontainer .loginpossibility#local-login,
-.loginpossibilitycontainer .loginpossibility#local-signup {
-  background: #2d3e50;
-}
-.loginpossibilitycontainer .loginpossibility#local-login a,
-.loginpossibilitycontainer .loginpossibility#local-signup a {
+.loginpossibilitycontainer .loginpossibility a a {
   color: #f39c11;
 }
 .loginpossibilitycontainer .loginpossibility#twitter-login {
@@ -122,11 +117,41 @@ button[type=submit]:hover {
   margin-left: 2.5%;
   width: 30%;
   float: left;
-  background: #848484;
+/* background #848484 */
   -webkit-border-radius: 10px;
   border-radius: 10px;
   padding: 20px;
   min-height: 280px;
+}
+.account-info .container .connect {
+  width: 100%;
+  float: left;
+  text-align: center;
+  background: #2d3e50;
+  padding: 22px 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.account-info .container .connect a {
+  color: #fff;
+}
+.account-info .container .connect.twitter-connect {
+  background: #55acef;
+}
+.account-info .container .connect.google-connect {
+  background: #de4b39;
+}
+.account-info .container .unlink {
+  width: 100%;
+  text-align: center;
+  background: #2d3e50;
+  padding: 22px 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+.account-info .container .unlink p {
+  margin: 0;
 }
 .account-info .container p {
   text-align: center;

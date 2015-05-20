@@ -9,7 +9,7 @@
   box-sizing border-box
 
 body
-  font-family Roboto
+  font-family Roboto, sans-serif
   font-size 20px
   padding 0
   margin 0
@@ -42,15 +42,12 @@ hr
     float left
     margin 0 2.5%
     text-align center
-    background grey
+    background #2d3e50
     padding 22px 0
     border-radius 5px
 
     a
       color #FFF
-
-    &#local-login, &#local-signup
-      background #2d3e50
 
       a
         color #f39c11
@@ -111,11 +108,39 @@ button[type=submit]
     margin-left 2.5%
     width 30%
     float left
-    background #848484
+    /* background #848484 */
     border-radius 10px
     padding 20px
     min-height: 280px;
     
+    .connect
+      width 100%
+      float left
+      text-align center
+      background #2d3e50
+      padding 22px 0
+      border-radius 5px
+
+      a
+        color #FFF
+
+      &.twitter-connect
+        background #55acef
+
+      &.google-connect
+        background #de4b39
+        
+    .unlink
+      width 100%
+      text-align center
+      background #2d3e50
+      padding 22px 0
+      border-radius 5px
+      color #FFF
+      
+      p
+        margin 0
+
     p
       text-align center
       word-wrap break-word
