@@ -49,6 +49,7 @@ hr
     a
       color #FFF
 
+    &#local-login, &#local-signup
       a
         color #f39c11
     
@@ -124,11 +125,31 @@ button[type=submit]
       a
         color #FFF
 
+        &:hover
+          background #FFF
+
+          a
+            color #2d3e50
+
       &.twitter-connect
         background #55acef
 
+        &:hover
+          border 1pt solid #55acef
+          background #FFF
+
+          a
+            color #55acef
+
       &.google-connect
         background #de4b39
+
+        &:hover
+          border 1pt solid #de4b39
+          background #FFF
+
+          a
+            color #de4b39
         
     .unlink
       width 100%
@@ -137,6 +158,7 @@ button[type=submit]
       padding 22px 0
       border-radius 5px
       color #FFF
+      margin-bottom 70px
       
       p
         margin 0
@@ -146,4 +168,6 @@ button[type=submit]
       word-wrap break-word
       
       &.heading
+        margin-top 30px
         color #f39c11
+        font-weight bold

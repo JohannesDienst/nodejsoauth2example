@@ -55,7 +55,8 @@ hr {
 .loginpossibilitycontainer .loginpossibility a {
   color: #fff;
 }
-.loginpossibilitycontainer .loginpossibility a a {
+.loginpossibilitycontainer .loginpossibility#local-login a,
+.loginpossibilitycontainer .loginpossibility#local-signup a {
   color: #f39c11;
 }
 .loginpossibilitycontainer .loginpossibility#twitter-login {
@@ -135,11 +136,31 @@ button[type=submit]:hover {
 .account-info .container .connect a {
   color: #fff;
 }
+.account-info .container .connect a:hover {
+  background: #fff;
+}
+.account-info .container .connect a:hover a {
+  color: #2d3e50;
+}
 .account-info .container .connect.twitter-connect {
   background: #55acef;
 }
+.account-info .container .connect.twitter-connect:hover {
+  border: 1pt solid #55acef;
+  background: #fff;
+}
+.account-info .container .connect.twitter-connect:hover a {
+  color: #55acef;
+}
 .account-info .container .connect.google-connect {
   background: #de4b39;
+}
+.account-info .container .connect.google-connect:hover {
+  border: 1pt solid #de4b39;
+  background: #fff;
+}
+.account-info .container .connect.google-connect:hover a {
+  color: #de4b39;
 }
 .account-info .container .unlink {
   width: 100%;
@@ -149,6 +170,7 @@ button[type=submit]:hover {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   color: #fff;
+  margin-bottom: 70px;
 }
 .account-info .container .unlink p {
   margin: 0;
@@ -158,5 +180,7 @@ button[type=submit]:hover {
   word-wrap: break-word;
 }
 .account-info .container p.heading {
+  margin-top: 30px;
   color: #f39c11;
+  font-weight: bold;
 }

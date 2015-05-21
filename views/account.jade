@@ -8,9 +8,9 @@ block content
       if user.local.email
         .unlink
           if user.twitter.token || user.google.token
-            a(href='/unlink/local') Unlink
+            a(href='/unlink/local') Unlink Local
           else
-            p.inactive Unlink
+            p.inactive Unlink Local
         p.heading userid 
         p #{user._id}
         p.heading email 
@@ -23,9 +23,9 @@ block content
       if user.twitter.token
         .unlink
           if user.local.email || user.google.token
-            a(href="/unlink/twitter") Unlink
+            a(href="/unlink/twitter") Unlink Twitter
           else
-            p.inactive Unlink
+            p.inactive Unlink Twitter
         p.heading id
         p #{user.twitter.id}
         p.heading display name
@@ -40,9 +40,9 @@ block content
       if user.google.token
         .unlink
           if user.local.email || user.twitter.token
-            a(href="/unlink/google") Unlink
+            a(href="/unlink/google") Unlink Google
           else
-            p.inactive Unlink
+            p.inactive Unlink Google
         p.heading id
         p #{user.google.id}
         p.heading email name
