@@ -2,11 +2,23 @@
 
 @import url("http//fonts.googleapis.com/css?family=Roboto");
 
+@font-face
+  font-family SocialFonts
+  src url(../fonts/socialoauthfont.eot),
+      url(../fonts/socialoauthfont.woff) format("woff"),
+      url(../fonts/socialoauthfont.ttf) format("truetype"),
+      url(../fonts/socialoauthfont.svg#socialoauthfont) format("svg");
+
 .clearfix
   clearfix()
 
 *
   box-sizing border-box
+
+span.icon
+  font-family SocialFonts
+  display inline-block
+  margin-right 20px
 
 body
   font-family Roboto, sans-serif
@@ -14,6 +26,31 @@ body
   padding 0
   margin 0
   background #ecf0f1
+  color #2d3e50
+  
+.icon-local-login:before
+  content "\6c"
+  color rgb(255, 255, 255)
+
+.icon-local-signup .path1:before
+  content "\70"
+  color rgb(255, 255, 255)
+.icon-local-signup .path2:before
+  content "\71"
+  color rgb(44, 62, 80)
+  margin-left -1em
+.icon-local-signup .path3:before
+  content: "\72"
+  color: rgb(243, 156, 18)
+  margin-left: -1em
+
+.icon-twitter:before
+  content "\74"
+  color rgb(255, 255, 255)
+
+.icon-google:before
+  content "\67"
+  color rgb(255, 255, 255)
  
 a
   text-decoration none
@@ -43,25 +80,55 @@ hr
     margin 0 2.5%
     text-align center
     background #2d3e50
-    padding 22px 0
     border-radius 5px
+    height: 67px;
+    line-height: 67px;
 
     a
+      display inline-block
       color #FFF
+      width 100%
 
     &#local-login, &#local-signup
+
+      &:hover
+        background #f39c11
+
+        a
+          color #2d3e50
+
       a
         color #f39c11
     
     &#twitter-login
       background #55acef
 
+      &:hover
+        border 1pt solid #55acef
+        background #FFF
+
+        a
+          color #55acef
+
+        .icon-twitter:before
+          color #55acef
+
     &#google-login
       background #de4b39
 
+      &:hover
+        border 1pt solid #de4b39
+        background #FFF
+
+        a
+          color #de4b39
+
+        .icon-google:before
+          color #de4b39
+
 form
   margin 50px auto 30px auto
-  width 380px
+  width 420px
   padding 0 20px 20px 20px
   border-radius 5px
   background #FFF
@@ -75,9 +142,20 @@ form
     height 67px
     background #ecf0f1
     padding-left 50px
+    font-size 20px
+    background-repeat no-repeat
+    background-size 30px 30px
+    background-position 10px 17px
+
+    &[name=username], &[name=email]
+      background-image url(../svg/user.svg)
+
+    &[name=password]
+      background-image url(../svg/lock.svg)
 
   button[type=submit]
     margin-top 20px
+    cursor pointer
 
 input
   font-family Roboto
@@ -109,7 +187,6 @@ button[type=submit]
     margin-left 2.5%
     width 30%
     float left
-    /* background #848484 */
     border-radius 10px
     padding 20px
     min-height: 280px;
@@ -119,14 +196,20 @@ button[type=submit]
       float left
       text-align center
       background #2d3e50
-      padding 22px 0
       border-radius 5px
+      height 67px
+      line-height 67px
+
+      &:hover
+        background #f39c11
 
       a
         color #FFF
+        width 100%
+        display inline-block
 
         &:hover
-          background #FFF
+          color #2d3e50
 
           a
             color #2d3e50
@@ -141,6 +224,9 @@ button[type=submit]
           a
             color #55acef
 
+            .icon-twitter:before
+              color #55acef
+
       &.google-connect
         background #de4b39
 
@@ -150,18 +236,65 @@ button[type=submit]
 
           a
             color #de4b39
+
+            .icon-google:before
+              color #de4b39
         
     .unlink
       width 100%
       text-align center
       background #2d3e50
-      padding 22px 0
       border-radius 5px
       color #FFF
       margin-bottom 70px
-      
+      height 67px
+      line-height 67px
+
+      a
+        display inline-block
+        width 100%
+        color #f39c11
+
+      &:hover
+        background #f39c11
+
+        a, p
+          color #2d3e50
+
       p
         margin 0
+
+      &.unlink-twitter
+        background #55acef
+
+        a
+          color #FFF
+
+        &:hover
+          border 1pt solid #55acef
+          background #FFF
+
+          a, p
+            color #55acef
+
+            .icon-twitter:before
+              color #55acef
+
+      &unlink-google
+        background #de4b39
+
+        a
+          color #FFF
+
+        &:hover
+          border 1pt solid #de4b39
+          background #FFF
+
+          a, p
+            color #de4b39
+
+            .icon-google:before
+              color #de4b39
 
     p
       text-align center

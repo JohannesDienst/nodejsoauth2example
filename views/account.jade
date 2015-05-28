@@ -8,24 +8,43 @@ block content
       if user.local.email
         .unlink
           if user.twitter.token || user.google.token
-            a(href='/unlink/local') Unlink Local
+            a(href='/unlink/local')
+              span(class="icon icon-local-signup")
+                span(class="path1")
+                span(class="path2")
+                span(class="path3")
+              | Unlink Local
           else
-            p.inactive Unlink Local
+            p.inactive
+              span(class="icon icon-local-signup")
+                span(class="path1")
+                span(class="path2")
+                span(class="path3")
+              | Unlink Local
         p.heading userid 
         p #{user._id}
-        p.heading email 
+        p.heading email
         p #{user.local.email}
       else
         .connect
-          a(href="/connect/local", title="connect local") Connect Local
+          a(href="/connect/local", title="connect local")
+            span(class="icon icon-local-signup")
+              span(class="path1")
+              span(class="path2")
+              span(class="path3")
+            | Connect Local
 
     .container
       if user.twitter.token
-        .unlink
+        .unlink.unlink-twitter
           if user.local.email || user.google.token
-            a(href="/unlink/twitter") Unlink Twitter
+            a(href="/unlink/twitter")
+              span(class="icon icon-twitter")
+              | Unlink Twitter
           else
-            p.inactive Unlink Twitter
+            p.inactive
+              span(class="icon icon-twitter")
+              | Unlink Twitter
         p.heading id
         p #{user.twitter.id}
         p.heading display name
@@ -34,15 +53,21 @@ block content
         p #{user.twitter.username}
       else
         .connect.twitter-connect
-          a(href="/connect/twitter") Connect Twitter
+          a(href="/connect/twitter")
+            span(class="icon icon-twitter")
+            | Connect Twitter
 
     .container
       if user.google.token
-        .unlink
+        .unlink.unlink-google
           if user.local.email || user.twitter.token
-            a(href="/unlink/google") Unlink Google
+            a(href="/unlink/google")
+              span(class="icon icon-google")
+              | Unlink Google
           else
-            p.inactive Unlink Google
+            p.inactive
+              span(class="icon icon-google")
+              | Unlink Google
         p.heading id
         p #{user.google.id}
         p.heading email name
@@ -51,8 +76,6 @@ block content
         p #{user.google.name}
       else
         .connect.google-connect
-          a(href="/connect/google") Connect Google
-
-#    div.logout
-#      .connect
-#        a(href="/logout") Logout
+          a(href="/connect/google")
+            span(class="icon icon-google")
+            | Connect Google

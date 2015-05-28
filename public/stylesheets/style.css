@@ -1,4 +1,8 @@
 @import url("http//fonts.googleapis.com/css?family=Roboto");
+@font-face {
+  font-family: SocialFonts;
+  src: url("../fonts/socialoauthfont.eot"), url("../fonts/socialoauthfont.woff") format("woff"), url("../fonts/socialoauthfont.ttf") format("truetype"), url("../fonts/socialoauthfont.svg#socialoauthfont") format("svg");
+}
 .clearfix {
   zoom: 1;
 }
@@ -15,12 +19,44 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+span.icon {
+  font-family: SocialFonts;
+  display: inline-block;
+  margin-right: 20px;
+}
 body {
   font-family: Roboto, sans-serif;
   font-size: 20px;
   padding: 0;
   margin: 0;
   background: #ecf0f1;
+  color: #2d3e50;
+}
+.icon-local-login:before {
+  content: "\6c";
+  color: #fff;
+}
+.icon-local-signup .path1:before {
+  content: "\70";
+  color: #fff;
+}
+.icon-local-signup .path2:before {
+  content: "\71";
+  color: #2c3e50;
+  margin-left: -1em;
+}
+.icon-local-signup .path3:before {
+  content: "\72";
+  color: #f39c12;
+  margin-left: -1em;
+}
+.icon-twitter:before {
+  content: "\74";
+  color: #fff;
+}
+.icon-google:before {
+  content: "\67";
+  color: #fff;
 }
 a {
   text-decoration: none;
@@ -48,12 +84,23 @@ hr {
   margin: 0 2.5%;
   text-align: center;
   background: #2d3e50;
-  padding: 22px 0;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  height: 67px;
+  line-height: 67px;
 }
 .loginpossibilitycontainer .loginpossibility a {
+  display: inline-block;
   color: #fff;
+  width: 100%;
+}
+.loginpossibilitycontainer .loginpossibility#local-login:hover,
+.loginpossibilitycontainer .loginpossibility#local-signup:hover {
+  background: #f39c11;
+}
+.loginpossibilitycontainer .loginpossibility#local-login:hover a,
+.loginpossibilitycontainer .loginpossibility#local-signup:hover a {
+  color: #2d3e50;
 }
 .loginpossibilitycontainer .loginpossibility#local-login a,
 .loginpossibilitycontainer .loginpossibility#local-signup a {
@@ -62,12 +109,32 @@ hr {
 .loginpossibilitycontainer .loginpossibility#twitter-login {
   background: #55acef;
 }
+.loginpossibilitycontainer .loginpossibility#twitter-login:hover {
+  border: 1pt solid #55acef;
+  background: #fff;
+}
+.loginpossibilitycontainer .loginpossibility#twitter-login:hover a {
+  color: #55acef;
+}
+.loginpossibilitycontainer .loginpossibility#twitter-login:hover .icon-twitter:before {
+  color: #55acef;
+}
 .loginpossibilitycontainer .loginpossibility#google-login {
   background: #de4b39;
 }
+.loginpossibilitycontainer .loginpossibility#google-login:hover {
+  border: 1pt solid #de4b39;
+  background: #fff;
+}
+.loginpossibilitycontainer .loginpossibility#google-login:hover a {
+  color: #de4b39;
+}
+.loginpossibilitycontainer .loginpossibility#google-login:hover .icon-google:before {
+  color: #de4b39;
+}
 form {
   margin: 50px auto 30px auto;
-  width: 380px;
+  width: 420px;
   padding: 0 20px 20px 20px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -82,9 +149,23 @@ form input {
   height: 67px;
   background: #ecf0f1;
   padding-left: 50px;
+  font-size: 20px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 30px 30px;
+  -moz-background-size: 30px 30px;
+  background-size: 30px 30px;
+  background-position: 10px 17px;
+}
+form input[name=username],
+form input[name=email] {
+  background-image: url("../svg/user.svg");
+}
+form input[name=password] {
+  background-image: url("../svg/lock.svg");
 }
 form button[type=submit] {
   margin-top: 20px;
+  cursor: pointer;
 }
 input {
   font-family: Roboto;
@@ -118,7 +199,6 @@ button[type=submit]:hover {
   margin-left: 2.5%;
   width: 30%;
   float: left;
-/* background #848484 */
   -webkit-border-radius: 10px;
   border-radius: 10px;
   padding: 20px;
@@ -129,15 +209,21 @@ button[type=submit]:hover {
   float: left;
   text-align: center;
   background: #2d3e50;
-  padding: 22px 0;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  height: 67px;
+  line-height: 67px;
+}
+.account-info .container .connect:hover {
+  background: #f39c11;
 }
 .account-info .container .connect a {
   color: #fff;
+  width: 100%;
+  display: inline-block;
 }
 .account-info .container .connect a:hover {
-  background: #fff;
+  color: #2d3e50;
 }
 .account-info .container .connect a:hover a {
   color: #2d3e50;
@@ -152,6 +238,9 @@ button[type=submit]:hover {
 .account-info .container .connect.twitter-connect:hover a {
   color: #55acef;
 }
+.account-info .container .connect.twitter-connect:hover a .icon-twitter:before {
+  color: #55acef;
+}
 .account-info .container .connect.google-connect {
   background: #de4b39;
 }
@@ -162,18 +251,70 @@ button[type=submit]:hover {
 .account-info .container .connect.google-connect:hover a {
   color: #de4b39;
 }
+.account-info .container .connect.google-connect:hover a .icon-google:before {
+  color: #de4b39;
+}
 .account-info .container .unlink {
   width: 100%;
   text-align: center;
   background: #2d3e50;
-  padding: 22px 0;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   color: #fff;
   margin-bottom: 70px;
+  height: 67px;
+  line-height: 67px;
+}
+.account-info .container .unlink a {
+  display: inline-block;
+  width: 100%;
+  color: #f39c11;
+}
+.account-info .container .unlink:hover {
+  background: #f39c11;
+}
+.account-info .container .unlink:hover a,
+.account-info .container .unlink:hover p {
+  color: #2d3e50;
 }
 .account-info .container .unlink p {
   margin: 0;
+}
+.account-info .container .unlink.unlink-twitter {
+  background: #55acef;
+}
+.account-info .container .unlink.unlink-twitter a {
+  color: #fff;
+}
+.account-info .container .unlink.unlink-twitter:hover {
+  border: 1pt solid #55acef;
+  background: #fff;
+}
+.account-info .container .unlink.unlink-twitter:hover a,
+.account-info .container .unlink.unlink-twitter:hover p {
+  color: #55acef;
+}
+.account-info .container .unlink.unlink-twitter:hover a .icon-twitter:before,
+.account-info .container .unlink.unlink-twitter:hover p .icon-twitter:before {
+  color: #55acef;
+}
+.account-info .container .unlinkunlink-google {
+  background: #de4b39;
+}
+.account-info .container .unlinkunlink-google a {
+  color: #fff;
+}
+.account-info .container .unlinkunlink-google:hover {
+  border: 1pt solid #de4b39;
+  background: #fff;
+}
+.account-info .container .unlinkunlink-google:hover a,
+.account-info .container .unlinkunlink-google:hover p {
+  color: #de4b39;
+}
+.account-info .container .unlinkunlink-google:hover a .icon-google:before,
+.account-info .container .unlinkunlink-google:hover p .icon-google:before {
+  color: #de4b39;
 }
 .account-info .container p {
   text-align: center;
